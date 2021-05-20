@@ -4,7 +4,7 @@ import firebase from "firebase";
 export const environment = {
   production: true,
   
-  firebaseConfig: {
+  firebase: {
     apiKey: "AIzaSyCERCSj4S8-b_SM3aAXw979bkmsImFfyt8",
     authDomain: "portafolio-web-claudio.firebaseapp.com",
     projectId: "portafolio-web-claudio",
