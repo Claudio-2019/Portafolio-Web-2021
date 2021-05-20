@@ -1,42 +1,71 @@
-<div style="padding: 40px;"></div>
+<div style="padding: 35px;"></div>
 
 <div class="container">
 
+    <h4 class="text-white">
+
+        DIGITAL TRANSFORMATION IS IN CONSTANT GROWTH, LET'S TALK ABOUT YOUR DIGITAL PROJECT! I WILL BE IN TOUCH WITH YOU
+        AS SOON AS POSSIBLE.
+
+
+    </h4>
+
+    <hr class="bg-light">
     <div class="card border border-light" id="FormContactCard">
-        
+
         <div class="card-body">
-           
-            <form action="">
+
+            <form [formGroup]="FormContactMe" (ngSubmit)="CreatePostJob()">
                 <div class="form-group">
 
                     <div class="form-row">
-            
-                        <label for=""><h4 class="text-white">NAME</h4></label>
-                        <input class="form-control animate__animated animate__fadeInLeftBig" type="text" >
+
+                        <label for="">
+                            <h4 class="text-white">NAME</h4>
+                        </label>
+                        <input class="form-control animate__animated animate__fadeInLeftBig" type="text"
+                            formControlName="formContactName">
                         <br>
-                        <label for=""><h4 class="text-white">LASTNAME</h4></label>
-                        <input class="form-control animate__animated animate__fadeInRightBig" type="text" >
+                        <label for="">
+                            <h4 class="text-white">LASTNAME</h4>
+                        </label>
+                        <input class="form-control animate__animated animate__fadeInRightBig" type="text"
+                            formControlName="formContactLastName">
                         <br>
-                        <label for=""><h4 class="text-white">EMAIL ADDRESS</h4></label>
-                        <input class="form-control  animate__animated animate__fadeInLeft" type="email" >
+                        <label for="">
+                            <h4 class="text-white">EMAIL ADDRESS</h4>
+                        </label>
+                        <input class="form-control  animate__animated animate__fadeInLeft" type="email"
+                            formControlName="formContactEmail">
                         <br>
-                        <label for=""><h4 class="text-white">PHONE NUMBER</h4></label>
-                        <input class="form-control animate__animated animate__fadeInRightBig" type="tel" >
+                        <label for="">
+                            <h4 class="text-white">PHONE NUMBER</h4>
+                        </label>
+                 
+                        <input class="form-control animate__animated animate__fadeInRightBig" type="tel"
+                            formControlName="formContactPhone">
+                            <br>    
+                        <label for="">
+                            <h4 class="text-white">TELL ME ABOUT YOUR PROJECT!!</h4>
+                        </label>
+                        <textarea class="form-control" rows="6"></textarea>
                         <br>
                         <button type="submit" class="btn btn-outline-warning">SEND REQUEST</button>
-            
-            
-            
+
+
+
                     </div>
-            
-            
+
+
                 </div>
             </form>
-
-
+            <br>
+            <div class="alert alert-success" role="alert" *ngIf="statusEnvio">
+                <strong>YOUR MESSAGE HAS BEEN SEND!</strong>
+            </div>
         </div>
     </div>
 
 
 </div>
-<app-footer></app-footer>
+

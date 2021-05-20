@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ContactMeModel } from "src/Models/ContactMe";
+import { ContactMeService } from "src/Services/contact-me.service";
 
 @Component({
   selector: 'app-contact-us',
@@ -7,7 +10,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor() { }
+  //Contact Me Form
+  FormContactMe: FormGroup;
+  formContactName = new FormControl();
+  formContactLastName = new FormControl();
+  formContactEmail = new FormControl();
+  formContactPhone = new FormControl();
+
+  statusEnvio:any
+
+  constructor(private FormContactMeBuilder: FormBuilder,private requestAPIFirebase:ContactMeService) {
+
+    this.FormContactMe = this.FormContactMeBuilder.group({
+      formContactName: ['', Validators.required],
+      formContactLastName: ['', Validators.required],
+      formContactEmail: ['', Validators.required],
+      formContactPhone: ['', Validators.required]
+    });
+
+  }
+
+  CreatePostJob(){
+
+    const ContactInformation:ContactMeModel ={
+      name:this.FormContactMe.get('formContactName').value,
+      lastName:this.FormContactMe.get('formContactLastName').value,
+      emailAddress:this.FormContactMe.get('formContactEmail').value,
+      phone:this.FormContactMe.get('formContactPhone').value
+    }
+
+    this.requestAPIFirebase.CreatePost(ContactInformation);
+
+    this.statusEnvio = true;
+
+
+  }
 
   ngOnInit(): void {
   }
