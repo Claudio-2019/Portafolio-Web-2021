@@ -1,4 +1,4 @@
-<div style="padding: 35px;"></div>
+<div style="padding: 75px;"></div>
 
 <div class="container">
 
@@ -23,34 +23,36 @@
                         <label for="">
                             <h4 class="text-white">NAME</h4>
                         </label>
-                        <input class="form-control animate__animated animate__fadeInLeftBig" type="text"
-                            formControlName="formContactName">
+                        <input id="InputName" class="form-control animate__animated animate__fadeInLeftBig" type="text"
+                            formControlName="formContactName" value="{{clearFormName}}">
                         <br>
                         <label for="">
                             <h4 class="text-white">LASTNAME</h4>
                         </label>
                         <input class="form-control animate__animated animate__fadeInRightBig" type="text"
-                            formControlName="formContactLastName">
+                            formControlName="formContactLastName" value="{{clearFormName}}">
                         <br>
                         <label for="">
                             <h4 class="text-white">EMAIL ADDRESS</h4>
                         </label>
                         <input class="form-control  animate__animated animate__fadeInLeft" type="email"
-                            formControlName="formContactEmail">
+                            formControlName="formContactEmail" value="{{clearFormName}}">
                         <br>
                         <label for="">
                             <h4 class="text-white">PHONE NUMBER</h4>
                         </label>
-                 
+
                         <input class="form-control animate__animated animate__fadeInRightBig" type="tel"
-                            formControlName="formContactPhone">
-                            <br>    
+                            formControlName="formContactPhone" value="{{clearFormName}}">
+                        <br>
                         <label for="">
                             <h4 class="text-white">TELL ME ABOUT YOUR PROJECT!!</h4>
                         </label>
-                        <textarea class="form-control" rows="6"></textarea>
+                        <textarea class="form-control  animate__animated animate__fadeInLeft" rows="6"
+                            formControlName="formContactDescription" value="{{clearFormName}}"></textarea>
                         <br>
-                        <button type="submit" class="btn btn-outline-warning">SEND REQUEST</button>
+                        <button type="submit" class="btn btn-outline-warning" [disabled]="FormContactMe.invalid">SEND
+                            REQUEST</button>
 
 
 
@@ -68,4 +70,3 @@
 
 
 </div>
-

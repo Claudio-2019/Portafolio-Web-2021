@@ -4,4 +4,5 @@ export interface ContactMeModel{
     lastName:string;
     emailAddress:string;
     phone:Number;
+    description:string;
 }
