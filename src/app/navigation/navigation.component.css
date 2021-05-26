@@ -3,7 +3,12 @@
 }
 
 #TabsStyles {
-    font-size: 25px;
+    font-size: 20px;
    
     margin: 25px; 
+}
+#NavbarFixed{
+    position: fixed ;
+    top: 0;
+    width: 100%;
 }
