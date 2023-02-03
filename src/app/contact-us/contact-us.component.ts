@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
+  UntypedFormBuilder,
+  UntypedFormControl,
+  UntypedFormGroup,
   Validators,
 } from '@angular/forms';
 import { ContactMeModel } from 'src/Models/ContactMe';
@@ -15,18 +15,18 @@ import { ContactMeService } from 'src/Services/contact-me.service';
 })
 export class ContactUsComponent implements OnInit {
   //Contact Me Form
-  FormContactMe: FormGroup;
-  formContactName = new FormControl();
-  formContactLastName = new FormControl();
-  formContactEmail = new FormControl();
-  formContactPhone = new FormControl();
-  formContactDescription = new FormControl();
+  FormContactMe: UntypedFormGroup;
+  formContactName = new UntypedFormControl();
+  formContactLastName = new UntypedFormControl();
+  formContactEmail = new UntypedFormControl();
+  formContactPhone = new UntypedFormControl();
+  formContactDescription = new UntypedFormControl();
 
   statusEnvio: any;
   clearFormName:string;
 
   constructor(
-    private FormContactMeBuilder: FormBuilder,
+    private FormContactMeBuilder: UntypedFormBuilder,
     private requestAPIFirebase: ContactMeService
   ) {
     this.FormContactMe = this.FormContactMeBuilder.group({
