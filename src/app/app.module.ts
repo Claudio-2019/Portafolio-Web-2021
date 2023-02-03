@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from "@angular/fire";
-import { AngularFireDatabaseModule } from "@angular/fire/database";
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFireDatabaseModule } from "@angular/fire/compat/database";
 import { environment  } from "../environments/environment.prod";
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
