@@ -51,15 +51,7 @@ export class ContactUsComponent implements OnInit {
       'DO YOU WANT TO SEND THE REQUEST TO OUR TEAM?'
     );
 
-    if (confirmMessage) {
-      this.requestAPIFirebase.CreatePost(ContactInformation);
-
-      this.statusEnvio = true;
-
-      this.clearFormName = '';
-    } else {
-      alert('THE REQUEST HAS NOT SENDED!');
-    }
+    
   }
 
   ngOnInit(): void {}

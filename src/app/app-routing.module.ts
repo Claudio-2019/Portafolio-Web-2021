@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'My-Technology-Strenght',component:TecnologiesComponent},
   {path:'About-Me',component:AboutUsComponent},
   {path:'**',redirectTo:'About-Me'}
-
+  
 
 ];
 

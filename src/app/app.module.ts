@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from "@angular/fire/compat";
-import { AngularFireDatabaseModule } from "@angular/fire/compat/database";
+
 import { environment  } from "../environments/environment.prod";
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +11,7 @@ import { TecnologiesComponent } from './tecnologies/tecnologies.component';
 import { PortafolioComponent } from './portafolio/portafolio.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -21,15 +21,15 @@ import { FooterComponent } from './footer/footer.component';
     TecnologiesComponent,
     PortafolioComponent,
     ContactUsComponent,
-    FooterComponent
+    FooterComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

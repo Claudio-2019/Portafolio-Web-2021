@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ContactMeModel } from "src/Models/ContactMe";
 
 @Injectable({
@@ -7,9 +6,5 @@ import { ContactMeModel } from "src/Models/ContactMe";
 })
 export class ContactMeService {
 
-  constructor(private FirestoreAccess:AngularFirestore) { }
-
-  CreatePost(Request:ContactMeModel){
-    return this.FirestoreAccess.collection('requestFromPortafolio').add(Request);
-  }
+ 
 }
