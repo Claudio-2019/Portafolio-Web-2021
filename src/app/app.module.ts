@@ -12,6 +12,7 @@ import { PortafolioComponent } from './portafolio/portafolio.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServicesComponent } from './services/services.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { ServicesComponent } from './services/services.component';
     AppRoutingModule,
 
   ],
-  providers: [],
+  providers: [
+    {provide:APP_BASE_HREF,useValue:'/Home'},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

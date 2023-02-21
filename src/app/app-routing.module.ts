@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:'Web-Proyects',component:PortafolioComponent},
   {path:'My-Technology-Strenght',component:TecnologiesComponent},
   {path:'About-Me',component:AboutUsComponent},
-  {path:'**',redirectTo:'About-Me'}
+  {path:'**',redirectTo:'/About-Me'}
   
 
 ];
